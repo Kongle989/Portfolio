@@ -1,0 +1,40 @@
+body {
+    background-color: #a4aaae;
+}
+
+#app {
+    background-color: white;
+    display: block;
+    width: 90vw;
+    height: 80vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-width: 20px;
+}
+.colored {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 7px 1px gray;
+    margin: 10px;
+    mix-blend-mode: multiply;
+}
+.name {
+    background-color: cyan;
+}
+
+.whatido {
+    background-color: yellow;
+}
+
+.enhance {
+    background-color: magenta;
+    color: white;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+}
