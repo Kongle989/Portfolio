@@ -9,7 +9,7 @@ import {
 
 const NavBar = () => {
     return (
-        <Navbar inverse collapseOnSelect>
+        <Navbar inverse collapseOnSelect fixedTop>
             <Navbar.Header>
                 <Navbar.Brand>
                     <a href="#"><div className="loading">Site under construction</div></a>
