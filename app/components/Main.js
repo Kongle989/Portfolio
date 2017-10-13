@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Route} from 'react-router-dom';
-import Whatido from './Children/Whatido';
-import Enhance from './Children/Enhance';
+import AboutMe from './Children/AboutMe';
+import NavBar from './Children/NavBar';
 
 export default class Main extends React.Component {
 
@@ -12,7 +12,11 @@ export default class Main extends React.Component {
         this.state = {
             firstName: "Kong",
             lastName: "Le",
-            location: "Winter Park, Fl"
+            location: "Winter Park, Fl",
+            email: "kongle989@yahoo.com",
+            phone: "626-272-1962",
+            linkedin: "https://www.linkedin.com/in/kong-le-4a2108a7/",
+            github: "https://github.com/Kongle989"
         };
 
     }
@@ -21,13 +25,11 @@ export default class Main extends React.Component {
         return (
             <div>
                 <div className="Main">
-                    <div className="name colored">
-                        <h1>{'<  '}{this.state.firstName}{'  >'}</h1>
-                    </div>
-
+                    <NavBar/>
                 </div>
-                <Whatido/>
-                <Enhance/>
+                <div className="aboutmecont">
+                    <AboutMe/>
+                </div>
             </div>
         );
     }
