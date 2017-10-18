@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link, Route} from 'react-router-dom';
 import AboutMe from './Children/AboutMe';
-import NavBar from './Children/NavBar';
+import {NavBar} from './Children/NavBar';
+import MySkills from './Children/MySkills';
+import Welcome from './Children/Welcome';
+import {CSSTransitionGroup} from 'react-transition-group';
 
 export default class Main extends React.Component {
 
@@ -28,7 +31,9 @@ export default class Main extends React.Component {
                     <NavBar/>
                 </div>
                 <div className="aboutmecont">
-                    <AboutMe/>
+                    <Route exact path="/" component={Welcome}/>
+                    <Route exact path="/aboutme" component={AboutMe}/>
+                    <Route exact path="/myskills" component={MySkills}/>
                 </div>
             </div>
         );

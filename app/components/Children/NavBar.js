@@ -1,29 +1,23 @@
 import React from 'react';
-import {
-    Navbar,
-    Nav,
-    NavItem,
-    NavDropdown,
-    MenuItem
-} from "react-bootstrap";
-
-const NavBar = () => {
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
+export const NavBar = () => {
     return (
         <Navbar inverse collapseOnSelect fixedTop>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#"><div className="loading">Site under construction</div></a>
+                    <LinkContainer to="/">
+                        <div className="loading">Site under construction</div>
+                    </LinkContainer>
                 </Navbar.Brand>
                 <Navbar.Toggle/>
             </Navbar.Header>
-            {/*<Navbar.Collapse>*/}
-                {/*/!*<Nav>*!/*/}
-                    {/*/!*<NavItem eventKey={1} href="#">Link</NavItem>*!/*/}
-                    {/*/!*<NavItem eventKey={2} href="#">Link</NavItem>*!/*/}
-                {/*/!*</Nav>*!/*/}
-            {/*</Navbar.Collapse>*/}
+            <Navbar.Collapse>
+            <Nav>
+                <LinkContainer to="/aboutme"><NavItem eventKey={1}>About Me</NavItem></LinkContainer>
+                <LinkContainer to="/myskills"><NavItem eventKey={2}>My Skills</NavItem></LinkContainer>
+            </Nav>
+            </Navbar.Collapse>
         </Navbar>
     )
 };
-
-module.exports = NavBar;

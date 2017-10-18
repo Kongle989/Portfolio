@@ -10,7 +10,12 @@ body {
     margin-top: 50px;
 }
 
-.aboutme {
+.welcome {
+    width: 90%;
+    max-width: 500px;
+}
+
+.welcome, .aboutme, .myskills {
     background-color: rgba(194, 196, 189, 0.8);
     margin: auto;
     padding: 2%;
@@ -49,6 +54,10 @@ p {
 }
 
 
+.loading, .loading:active {
+    width: 240px;
+}
+
 .loading:after {
     overflow: hidden;
     display: inline-block;
@@ -57,6 +66,24 @@ p {
     animation: ellipsis steps(4,end) 1900ms infinite;
     content: "\2026"; /* ascii code for the ellipsis character */
     width: 0;
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }
 
 @keyframes ellipsis {
