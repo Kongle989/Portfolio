@@ -77,7 +77,11 @@ p {
     transition: all 1000ms;
 }
 .pageSlider-exit {
-    display: none;
+    transform: translateY(0);
+}
+.pageSlider-exit.pageSlider-exit-active {
+    transform: translateY(-100%);
+    transition: all 1000ms;
 }
 
 @keyframes ellipsis {

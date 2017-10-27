@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link, Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import AboutMe from './Children/AboutMe';
 import {NavBar} from './Children/NavBar';
 import MySkills from './Children/MySkills';
 import Welcome from './Children/Welcome';
-import {TransitionGroup, CSSTransition} from 'react-transition-group';
+import {CSSTransitionGroup} from 'react-transition-group';
 
 export default class Main extends React.Component {
 
@@ -31,19 +31,15 @@ export default class Main extends React.Component {
                     <NavBar/>
                 </div>
                 <div className="aboutmecont">
-                    <TransitionGroup>
-                        <CSSTransition key={this.props.location.key}
-                                       timeout={1000}
-                                       classNames="pageSlider"
-                                       mountOnEnter={true}
-                                       unmountOnExit={true}>
-                            <Switch location={this.props.location}>
-                                <Route exact path="/" component={Welcome}/>
-                                <Route path="/aboutme" component={AboutMe}/>
-                                <Route path="/myskills" component={MySkills}/>
-                            </Switch>
-                        </CSSTransition>
-                    </TransitionGroup>
+                    <CSSTransitionGroup key={this.props.location.key}
+                                        transitionName="pageSlider"
+                                        transitionAppearTimeout={10000}>
+                        <Switch location={this.props.location}>
+                            <Route exact path="/" component={Welcome}/>
+                            <Route path="/aboutme" component={AboutMe}/>
+                            <Route path="/myskills" component={MySkills}/>
+                        </Switch>
+                    </CSSTransitionGroup>
                 </div>
             </div>
         )
