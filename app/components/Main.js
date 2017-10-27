@@ -4,14 +4,11 @@ import AboutMe from './Children/AboutMe';
 import {NavBar} from './Children/NavBar';
 import MySkills from './Children/MySkills';
 import Welcome from './Children/Welcome';
-import {CSSTransitionGroup} from 'react-transition-group';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 export default class Main extends React.Component {
-
     constructor(props) {
-
         super(props);
-
         this.state = {
             firstName: "Kong",
             lastName: "Le",
@@ -21,7 +18,6 @@ export default class Main extends React.Component {
             linkedin: "https://www.linkedin.com/in/kong-le-4a2108a7/",
             github: "https://github.com/Kongle989"
         };
-
     }
 
     render() {
@@ -31,15 +27,19 @@ export default class Main extends React.Component {
                     <NavBar/>
                 </div>
                 <div className="aboutmecont">
-                    <CSSTransitionGroup key={this.props.location.key}
-                                        transitionName="pageSlider"
-                                        transitionAppearTimeout={10000}>
-                        <Switch location={this.props.location}>
-                            <Route exact path="/" component={Welcome}/>
-                            <Route path="/aboutme" component={AboutMe}/>
-                            <Route path="/myskills" component={MySkills}/>
-                        </Switch>
-                    </CSSTransitionGroup>
+                    <TransitionGroup>
+                        <CSSTransition key={this.props.location.pathname.split('/')[1]}
+                                       classNames="pageSlider"
+                                       timeout={1000}
+                                       mountOnEnter={true}
+                                       unmountOnExit={true}>
+                            <Switch location={this.props.location}>
+                                <Route exact path="/" component={Welcome}/>
+                                <Route path="/aboutme" component={AboutMe}/>
+                                <Route path="/myskills" component={MySkills}/>
+                            </Switch>
+                        </CSSTransition>
+                    </TransitionGroup>
                 </div>
             </div>
         )

@@ -15,9 +15,16 @@ body {
     max-width: 500px;
 }
 
+.aboutmecont {
+    position: relative;
+}
+
 .welcome, .aboutme, .myskills {
+    position: absolute;
     background-color: rgba(194, 196, 189, 0.8);
-    margin: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     padding: 2%;
     max-width: 800px;
 }
@@ -53,7 +60,6 @@ p {
     }
 }
 
-
 .loading, .loading:active {
     width: 240px;
 }
@@ -62,8 +68,8 @@ p {
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
-    -webkit-animation: ellipsis steps(4,end) 1900ms infinite;
-    animation: ellipsis steps(4,end) 1900ms infinite;
+    -webkit-animation: ellipsis steps(4, end) 1900ms infinite;
+    animation: ellipsis steps(4, end) 1900ms infinite;
     content: "\2026"; /* ascii code for the ellipsis character */
     width: 0;
 }
@@ -72,16 +78,18 @@ p {
     transform: translateY(-100%);
 }
 
-.pageSlider-enter.pageSlider-enter-active {
+.pageSlider-enter-active {
     transform: translateY(0);
     transition: all 1000ms;
 }
+
 .pageSlider-exit {
-    transform: translateY(0);
+    opacity: 1;
 }
-.pageSlider-exit.pageSlider-exit-active {
-    transform: translateY(-100%);
-    transition: all 1000ms;
+
+.pageSlider-exit-active {
+    opacity: 0;
+    transition: opacity 700ms;
 }
 
 @keyframes ellipsis {
