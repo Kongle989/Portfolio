@@ -15,6 +15,18 @@ body {
     max-width: 500px;
 }
 
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .aboutmecont {
     position: relative;
 }
@@ -50,7 +62,6 @@ p {
     }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
     from {
         opacity: 0;
@@ -96,39 +107,127 @@ p {
     margin: 5px;
     padding: 5px;
     border-radius: 20px;
-    width: 75px;
+    width: 80px;
 }
 
 .s1 {
-    background-color: rgba(255, 225, 0, 0.8);
+    background-color: rgba(255, 225, 0, 0.6);
+    animation: skill1 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill1 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 100%
+    }
 }
 
 .s2 {
-    background-color: rgba(255, 112, 0, 0.8);
+    background-color: rgba(255, 112, 0, 0.6);
+    animation: skill2 1s 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill2 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 83%
+    }
 }
 
 .s3 {
-    background-color: rgba(255, 15, 0, 0.8)
+    background-color: rgba(255, 15, 0, 0.6);
+    animation: skill3 1s 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill3 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 69%
+    }
 }
 
 .s4 {
-    background-color: rgba(255, 0, 146, 0.8)
+    background-color: rgba(255, 0, 146, 0.6);
+    animation: skill4 1s 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill4 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 54%
+    }
 }
 
 .s5 {
-    background-color: rgba(0, 100, 255, 0.8)
+    background-color: rgba(0, 100, 255, 0.6);
+    animation: skill5 1s 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill5 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 72%
+    }
 }
 
 .s6 {
-    background-color: rgba(0, 177, 255, 0.8)
+    background-color: rgba(0, 177, 255, 0.6);
+    animation: skill6 1s 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill6 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 53%
+    }
 }
 
 .s7 {
-    background-color: rgba(0, 255, 102, 0.8)
+    background-color: rgba(0, 255, 102, 0.6);
+    animation: skill7 1s 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill7 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 47%
+    }
 }
 
 .s8 {
-    background-color: rgba(115, 255, 0, 0.8)
+    background-color: rgba(115, 255, 0, 0.6);
+    animation: skill8 1s 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skill8 {
+    from {
+        width: 80px;
+    }
+    to {
+        width: 47%
+    }
 }
 
 @keyframes ellipsis {
