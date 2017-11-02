@@ -11,8 +11,6 @@ export default MySkills => (
         <div className="skill s6">NodeJS</div>
         <div className="skill s7">MySQL</div>
         <div className="skill s8">MongoDB</div>
-
     </div>
-
 
 )
