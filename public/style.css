@@ -6,6 +6,22 @@ body {
     animation: fadein 3s;
 }
 
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: #FFF 10px solid;
+    display: inline-block;
+    position: absolute;
+}
+
+#bubbleContainer {
+    background-color: #CC6666;
+    width: 500px;
+    height: 500px;
+}
+
 .Main {
     margin-top: 50px;
 }

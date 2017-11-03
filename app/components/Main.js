@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
+import Bubble from './Bubble';
 import AboutMe from './Children/AboutMe';
 import {NavBar} from './Children/NavBar';
 import MySkills from './Children/MySkills';
@@ -35,12 +36,13 @@ export default class Main extends React.Component {
                                        unmountOnExit={true}>
                             <Switch location={this.props.location}>
                                 <Route exact path="/" component={Welcome}/>
-                                <Route path="/aboutme" component={AboutMe}/>
+                                {/*<Route path="/aboutme" component={AboutMe}/>*/}
                                 <Route path="/myskills" component={MySkills}/>
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>
                 </div>
+                {/*<Bubble/>*/}
             </div>
         )
     }
