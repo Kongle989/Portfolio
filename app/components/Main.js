@@ -42,7 +42,7 @@ export default class Main extends React.Component {
                         </CSSTransition>
                     </TransitionGroup>
                 </div>
-                {/*<Bubble/>*/}
+                <Bubble/>
             </div>
         )
     }

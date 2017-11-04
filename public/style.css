@@ -6,24 +6,28 @@ body {
     animation: fadein 3s;
 }
 
-.circle {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: #FFF 10px solid;
-    display: inline-block;
-    position: absolute;
+.bubbleContainer {
+    position: relative;
+    overflow: hidden;
+    width: 95vw;
+    height: 95vh;
+    visibility: hidden;
 }
 
-#bubbleContainer {
-    background-color: #CC6666;
-    width: 500px;
-    height: 500px;
+.circle {
+    width: 10%;
+    padding-top: 8%;
+    border-radius: 50%;
+    border: #b1d1d6 5px solid;
+    display: inline-block;
+    position: fixed;
+    background-color: #dafaff;
 }
 
 .Main {
     margin-top: 50px;
+    margin-bottom: 31px;
+
 }
 
 .welcome {
@@ -256,4 +260,15 @@ p {
     to {
         width: 1.25em;
     }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(20, 20, 20, .8);
+    text-align: center;
+    color: #9d9d9d;
+    padding: 5px;
+    border-top: 1px solid black;
 }
