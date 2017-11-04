@@ -3,7 +3,6 @@ const circles = document.querySelectorAll(".circle");
 for (let i = 0; i < 5; i++) {
     let circle = circles[i];
     animateCircles(circle);
-    console.log(new Date().getSeconds());
 }
 
 function addFinishHandler(anim, el) {
@@ -19,14 +18,17 @@ function animateCircles(circle) {
 
     circle.keyframes = [{
         opacity: 0,
-        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
+        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)",
+        "-webkit-transform": "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
 
     }, {
         opacity: .2,
-        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
+        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)",
+        "-webkit-transform": "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
     }, {
         opacity: 0,
-        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
+        transform: "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)",
+        "-webkit-transform": "translate3d(" + (Math.random() * maxX) + "px," + (Math.random() * maxY) + "px, 0px)"
     }];
 
     circle.animProps = {
