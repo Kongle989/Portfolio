@@ -24,6 +24,16 @@ body {
     background-color: #dafaff;
 }
 
+.square {
+    width: 10%;
+    padding-top: 8%;
+    border: #b1d1d6 5px solid;
+    display: inline-block;
+    position: fixed;
+    background-color: #dafaff;
+    animation: squareanimate 10s ease-in-out infinite;
+}
+
 .Main {
     margin-top: 50px;
     margin-bottom: 31px;

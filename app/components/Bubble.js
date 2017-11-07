@@ -9,6 +9,7 @@ export default Bubble => (
         <div className="circle"></div>
         <div className="circle"></div>
         <div className="circle"></div>
+        <div className="square"></div>
 
     </div>
     
