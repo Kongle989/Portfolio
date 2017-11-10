@@ -36,7 +36,7 @@ export default class Main extends React.Component {
                                        unmountOnExit={true}>
                             <Switch location={this.props.location}>
                                 <Route exact path="/" component={Welcome}/>
-                                {/*<Route path="/aboutme" component={AboutMe}/>*/}
+                                <Route path="/aboutme" component={AboutMe}/>
                                 <Route path="/myskills" component={MySkills}/>
                             </Switch>
                         </CSSTransition>
